@@ -190,7 +190,7 @@ app.get("*", (req,res) => {
 
 data.initialize()
 .then(() => {
-  app.listen(HTTP_PORT, onHttpStart);
+  app.listen(process.env.PORT || HTTP_PORT, onHttpStart);
 })
 .catch((reason) => {
   console.log(reason);
